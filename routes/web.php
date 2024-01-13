@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,21 +28,22 @@ Route::get('/', function () {
 //     return 'You are logged in';
 // })->name('logged');
 
-// Route::get('aya',[ExampleController::class,'show']);
+// Route::get('test20',[ExampleController::class,'createSession']);
+// Route::get('getSession',[Controller::class,'getSession']);
 
 // Route::post('imageUpload',[ExampleController::class,'upload'])->name('imageUpload');
 
-// Route::get('test', function(){
-//     return view('testHome');
-// })->name('testHome');
+Route::get('test', function(){
+    return view('testHome');
+})->name('testHome');
 
-// Route::get('404', function(){
-//     return view('404');
-// })->name('404');
+Route::get('404', function(){
+    return view('404');
+})->name('404');
 
-// Route::get('contact', function(){
-//     return view('contact');
-// })->name('contact');
+Route::get('contact', function(){
+    return view('contact');
+})->name('contact');
 
 // Route::get('image', function(){
 //     return view('image');
@@ -49,17 +51,13 @@ Route::get('/', function () {
 
 
 // Routes for the car table
-Route::get('createCar',[CarController::class,'create'])->middleware('verified')->name('createCar');
-Route::get('cars',[CarController::class,'index'])->name('cars');
-Route::get('updateCar/{id}',[CarController::class,'edit']);
-Route::get('showCar/{id}',[CarController::class,'show']);
-Route::get('deleteCar/{id}',[CarController::class,'destroy']);
-Route::get('trashed',[CarController::class,'trashed'])->name('trashed');
-Route::get('restoreCar/{id}',[CarController::class,'restore'])->name('restoreCar');
-Route::get('forceDelete/{id}',[CarController::class,'forceDelete'])->name('forceDelete');
-Route::put('update/{id}',[CarController::class,'update'])->name('update');
-Route::post('storeCar',[CarController::class,'store'])->name('storeCar');
-Auth::routes(['verify'=>true]);
+// 
 
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// oute::get('home', function(){
+//     return view('home');
+// });R
+// task12
+Route::get('contant',[ExampleController::class,'contant'])->name('contant');
+Route::post('contactMail',[ExampleController::class,'contactMail'])->name('contactMail');

@@ -33,18 +33,15 @@
         {{ $message }}
       @enderror
     </div>
-    <input type="hidden" name="oldImage" value="{{ $car->image }}">
     <div class="form-group">
       <label for="category">Category:</label>
       <select name="category_id" id="">
-        @foreach($categories as $category)
-        <option value="{{ $category->id }}"{{ $car->category_id == $category->id ? 'selected' : '' }}>{{ $category->cat_name }}</option>
-        @endforeach
+      @foreach($categories as $category)        
+          <option value="{{ $category->id }}" @selected($category->id == $car->category_id) >{{ $category->cat_name }}</option>
+      @endforeach
       </select>
-      @error('category_id')
-        {{ $message }}
-      @enderror
     </div>
+    <input type="hidden" name="oldImage" value="{{ $car->image }}">
     <div class="checkbox">
       <label><input type="checkbox" name="published" @checked($car->published)> Published me</label>
     </div>
