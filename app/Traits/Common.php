@@ -10,4 +10,5 @@ Trait Common {
         return $file_name;
     }
 }
+?>
     

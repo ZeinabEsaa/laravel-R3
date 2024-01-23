@@ -15,7 +15,6 @@ use App\Http\Controllers\Controller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -30,9 +29,7 @@ Route::get('/', function () {
 
 // Route::get('test20',[ExampleController::class,'createSession']);
 // Route::get('getSession',[Controller::class,'getSession']);
-
 // Route::post('imageUpload',[ExampleController::class,'upload'])->name('imageUpload');
-
 Route::get('test', function(){
     return view('testHome');
 })->name('testHome');
@@ -44,20 +41,18 @@ Route::get('404', function(){
 Route::get('contact', function(){
     return view('contact');
 })->name('contact');
-
 // Route::get('image', function(){
 //     return view('image');
 // });
 
-
 // Routes for the car table
 // 
-
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 // oute::get('home', function(){
 //     return view('home');
 // });R
 // task12
 Route::get('contant',[ExampleController::class,'contant'])->name('contant');
 Route::post('contactMail',[ExampleController::class,'contactMail'])->name('contactMail');
+
+

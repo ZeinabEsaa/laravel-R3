@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('db:backup')->everyMinute();
+        // $schedule->command('inspire')->hourly();
     }
 
     /**
@@ -21,7 +21,7 @@ class Kernel extends ConsoleKernel
     protected function commands(): void
     {
         $this->load(__DIR__.'/Commands');
- 
+
         require base_path('routes/console.php');
-}
+    }
 }
